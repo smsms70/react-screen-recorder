@@ -1,0 +1,12 @@
+#page-header{
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 0;
+  
+}
+#page-header h1{
+  margin: 0;
+}

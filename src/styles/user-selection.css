@@ -1,0 +1,27 @@
+#selection-choices-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #2a2d6b;
+  cursor: pointer;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  position:absolute;
+  top: -45px;
+  overflow: hidden;
+}
+
+.selection-choice-box{
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.selection-choice-box:hover{
+  background-color: #414597;
+}
+.active-choice-box{
+  background-color: #414597;
+
+
+}

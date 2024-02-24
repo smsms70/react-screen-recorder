@@ -1,0 +1,24 @@
+#main-btn-container{
+  display: flex;
+  min-height: 150px;
+  border: 1px solid grey;
+  margin: 30px;
+  border-radius: 100px;
+  padding: 10px;
+  transition: 0.25s;
+}
+#main-btn-container:hover{
+  border-color: #646cff;
+}
+#record-btn{
+  margin: 20px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 20px 30px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+#record-btn:hover {
+  border-color: #646cff;
+}

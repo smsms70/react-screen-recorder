@@ -1,0 +1,58 @@
+#function-btns-main-container{
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  /* width: 50%; */
+  margin-top: 20px;
+  padding: 5px 30px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  gap: 20px;
+}
+/* Timer Box */
+#timer-box{ 
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  justify-content: space-around;
+}
+#timer-box svg{
+  width: 10px;
+  /* background-color: #ce0000; */
+}
+/* Setters Btns */
+#setters-btns-container{
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.function-btn{
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40px;
+  height: 35px;
+  background-color: #ddd;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  border-right: 1px solid grey;
+  transition-duration: 50ms;
+  justify-content: center;
+}
+.function-btn:hover{
+  background-color: #ccce;
+}
+.function-btn img{
+  width: 100%;
+  height: 100%;
+}
+
+#voice-btn{
+  padding: 8px;
+}
+#stop-btn{
+  border-right: none;
+  width: 70px;
+}
