@@ -1,21 +1,32 @@
-import { useState, useEffect } from "react";
-import { Dropdown } from "./dropdown";
 import { VideoCamara } from "./icons";
 import "../styles/main-btn.css";
 
 
-export function RecordBtn ({func, timer, dropdown = true}) {
-  const [quality, setQuality] = useState("none");
+export function RecordBtn ({startRecord, setStartRecord, timer, runningVideo}) {
+
+  const startRecordHandler = () => {
+    if(!timer) {
+      setStartRecord(true);
+    }
+  }
 
   return (
-    <section id="main-btn-container">
-      <button id="record-btn" onClick={!timer ? func : ()=>{}}>
+    <>
+    <section 
+    id="main-btn-container" 
+    className={startRecord ? "for-video" : ""}
+    >
+      {
+      !startRecord 
+      ? 
+      <button id="record-btn" onClick={startRecordHandler}>
         <VideoCamara/>
-      </button>
-        {dropdown && <Dropdown
-          options={["1080p", "720p", "460p"]}
-          setParam={setQuality}
-        />}
+      </button> 
+      : 
+      <video src="" id="video-running" ref={runningVideo}></video>
+      }
+      
     </section>
+    </>
   )
 }

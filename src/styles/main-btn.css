@@ -6,6 +6,7 @@
   border-radius: 100px;
   padding: 10px;
   transition: 0.25s;
+  overflow: hidden;
 }
 #main-btn-container:hover{
   border-color: #646cff;
@@ -21,4 +22,11 @@
 }
 #record-btn:hover {
   border-color: #646cff;
+}
+.for-video{
+  border-radius: 20px !important;
+}
+#video-running{
+  max-width: 100%;
+  border-radius: 20px;
 }

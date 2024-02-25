@@ -4,8 +4,8 @@
   justify-content: space-evenly;
   background-color: #2a2d6b;
   cursor: pointer;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
   position:absolute;
   top: -45px;
   overflow: hidden;

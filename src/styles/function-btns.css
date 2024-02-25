@@ -8,6 +8,7 @@
   border: 1px solid grey;
   border-radius: 15px;
   gap: 20px;
+  user-select: none;
 }
 /* Timer Box */
 #timer-box{ 
@@ -55,4 +56,14 @@
 #stop-btn{
   border-right: none;
   width: 70px;
+}
+
+.inactive, .inactive-audio{
+  background-color: grey ;
+}
+.inactive{
+  cursor: default;
+}
+.inactive:hover{
+  background-color: grey;
 }

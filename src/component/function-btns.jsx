@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { MicrophoneOn, MicrophoneOff, TrashCan, Reload, Pause, Play, Stop, VideoCamara, Circle } from "./icons.jsx";
 import "../styles/function-btns.css";
 
-export function FunctionBtns ({setAudio, timer, setTimer, stopRecord, getTime, setDownloadBox}) {
+export function FunctionBtns ({setAudio, timer, setTimer, stopRecord, getTime, downloadBox, setDownloadBox}) {
   return (
     <section id="function-btns-main-container">
       <TimerBox
@@ -12,8 +12,10 @@ export function FunctionBtns ({setAudio, timer, setTimer, stopRecord, getTime, s
       <SettersBtns
         setAudio={setAudio}
         setTimer={setTimer}
+        timer={timer}
         stopRecord={stopRecord}
         setDownloadBox={setDownloadBox}
+        downloadBox={downloadBox}
       />
     </section>
   )
@@ -69,31 +71,28 @@ function TimerBox ({timer, getTime}) {
 }
 
 
-function SettersBtns ({setAudio, stopRecord, pause = false, setDownloadBox}) {
+function SettersBtns ({setAudio, stopRecord, pause = false, downloadBox, setDownloadBox, timer}) {
   const [activeAudio, setActiveAudio] = useState(true);
   const audioHandler = () => {
     setActiveAudio(!activeAudio)
     setAudio(!activeAudio)
   }
   const delateHandler = () => {
-    setDownloadBox([])
+    if (downloadBox[0]) setDownloadBox([]);
   }
   return(
     <section id="setters-btns-container">
-      <div className="function-btn" id="voice-btn" onClick={audioHandler}>{
+      <div className={`function-btn ${!activeAudio ? "inactive-audio" : ""}`} id="voice-btn" onClick={audioHandler}>{
         activeAudio ? <MicrophoneOn /> : <MicrophoneOff />
       }</div>
-      <div className="function-btn" onClick={delateHandler}>
+      <div className={`function-btn ${!downloadBox[0] ? "inactive" : ""}`} onClick={delateHandler}>
         <TrashCan />
-      </div>
-      <div className="function-btn">
-        <Reload />
       </div>
       {pause && 
         <div className="function-btn">
           <Pause />
         </div>}
-      <div className="function-btn" id="stop-btn" onClick={stopRecord}> 
+      <div className={`function-btn ${!timer ? "inactive" : ""}`} id="stop-btn" onClick={stopRecord}> 
         <Stop />
         <span>Stop</span>
       </div>
