@@ -4,7 +4,7 @@
   align-content: center;
   border: 1px solid grey;
   margin-bottom: 30px;
-  padding: 10px 20px;
+  padding: 20px 40px 10px 20px;
   border-radius: 15px;
   position: relative;
   transition-duration: 200ms;
@@ -24,17 +24,20 @@
   display: flex;
   justify-content: center;
 }
-#download-btn{
+.download-btn{
   width: 100px;
-  justify-content: center;
   padding: 10px 15px;
-  cursor: pointer;
   border-radius: 10px;
   border: 1px solid grey;
-  transition: border-color 0.25s;
+  justify-content: center;
   background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: background-color 0.5s;
 }
-#download-btn:hover {
+.download-btn:hover {
+  background-color: #646cff55;
+
   border-color: #646cff;
 }
 
@@ -49,6 +52,16 @@
   z-index: 100;
 }
 
-.hidden{
-  display: none !important;
+#delete-current-download-box{
+  width: 30px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  text-align: center;
+  transition: border-color 0.25s;
+}
+#delete-current-download-box:hover{
+  border-color: red;
+  background-color: #f002;
 }

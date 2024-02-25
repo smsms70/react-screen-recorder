@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/user-selection.css";
 
 
@@ -23,13 +22,7 @@ export function UserSelection ({userSelection, getUserSelection, RecordInSwitch}
         value="user"
         className={`selection-choice-box ${userSelection === 'user' ? 'active-choice-box' : ''}`}
       >
-        User
-      </option>
-      <option
-        value="screen&user"
-        className={`selection-choice-box ${userSelection === 'screen&user' ? 'active-choice-box' : ''}`}
-      >
-        Screen and user
+        Webcam
       </option>
     </section>
   );

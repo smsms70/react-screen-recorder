@@ -12,6 +12,7 @@
   border: 1px solid grey;
   box-sizing: border-box;
   cursor: pointer;
+  transition: 200ms;
 }
 #quality-text{
   width: 45px;
@@ -25,6 +26,9 @@
 #quality-box:hover > #dropdown-btn{
   background-color: #ccce !important;
 }
+#quality-box:hover{
+  background-color: #ccc2
+}
 .quality-btn{
   padding: 7px 12px;
 }
@@ -32,8 +36,8 @@
 #dropdown-quality-container{
   border: 1px solid grey;
   overflow: hidden;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   cursor: pointer;
   background-color: #ddd;
   color: black;

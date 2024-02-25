@@ -19,8 +19,10 @@
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  transition: background-color 2s;
 }
 #record-btn:hover {
+  background-color: #646cff55;
   border-color: #646cff;
 }
 .for-video{

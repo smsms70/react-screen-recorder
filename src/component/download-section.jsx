@@ -16,9 +16,6 @@ export function DownloadSection ({download, downloadLink, time, index, downloadB
     const newArr = arr.filter((element) => element !== downloadBox[index])
     setDownloadBox(newArr)
   }
-  const downloadedHandler = () => {
-    console.log("downloaded")
-  }
   return (
     <section id="download-section-container">
       <div id="download-section-text-container">
@@ -43,15 +40,19 @@ export function DownloadSection ({download, downloadLink, time, index, downloadB
         href={downloadLink} 
         download={`${downloadName}${quality}`} 
         >
-          <button id="download-btn">
+          <button className="download-btn">
             Download
           </button>
         </a>
         }
-        <button id="download-btn" onClick={deleteHandler}>
-          Delate
-        </button>
       </div>
+        <button 
+        className="download-btn" 
+        id="delete-current-download-box" 
+        onClick={deleteHandler}
+        >
+          x
+        </button>
     </section>
   )
 }

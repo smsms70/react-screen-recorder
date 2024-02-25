@@ -23,9 +23,6 @@ export function RecordComponents ({}) {
         {userSelection === 'user' && <UserRecord
         setRecordInSwitch={setRecordInSwitch}
         />}
-        {userSelection === 'screen&user' && <ScreenAndUser
-          
-        />}
       </section>
     </>
   )
